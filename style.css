@@ -1,75 +1,72 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:'Raleway', sans-serif;
-    background:#FEFBF2;
-    color:#6B1831;
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #FEFBF2;
+    color: #6B1831;
+    line-height: 1.6;
 }
 
-/* HERO */
-
-.hero{
-     height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:#6B1831;
-    background-image: url("");  /* <-- Aquí va el gif de la portada */
- 
+/* ================================= */
+/* HERO (PORTADA)                    */
+/* ================================= */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #6B1831;
+    background-image: url(""); /* <-- Aquí va el gif de la portada */
 }
-    /* Caja de la T original */
+
+.hero-content {
+    max-width: 900px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 128px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 25px;
+    color: #6B1831;
+}
+
 .letra-t {
     position: relative; 
     display: inline-block;
 }
 
-/* T inclinada que va por encima */
 .letra-t::after {
-    content: "T";               
-    position: absolute;         /* Lo saca del flujo normal para poder moverlo libremente */
-    top: -80px;                 /* Lo mueve hacia arriba o abajo */
-    left: 20px;                  /* Lo mueve hacia la derecha si aumento el numero */
-    transform: rotate(35deg);   /* La inclinación  */
-    color: #6B1831;           
-    
-
-}
-    
-
-.hero-content{
-    max-width:900px;
-    padding:20px;
+    content: "T";       
+    position: absolute;       
+    top: -80px;          
+    left: 20px;          
+    transform: rotate(35deg);  
+    color: #6B1831;         
 }
 
-.hero h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 128px;              
-    font-weight: normal;           
-    text-transform: uppercase;     /* Todo en mayúsculas */
-    letter-spacing: 0.08em;        
-    margin-bottom: 25px;
-    color: #6B1831;                
-}
 .hero p {
     font-family: 'Rubik', sans-serif;
-    font-size: 1.6rem;        
-    text-align: center;        
-    margin-bottom: 20px;       
-    line-height: 1.5;          
-    color: #6B1831;        
-    margin-top: -15px;    /* <-- si pongo -25px subirá más, si pongo -5px subirá menos */
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 1.5;
+    color: #6B1831;
+    margin-top: -15px; 
     margin-bottom: 35px;   
 }
 
@@ -82,138 +79,420 @@ body{
     border-radius: 50px;
     font-weight: bold;
     transition: .3s;
-    /* --- LO NUEVO QUE AGREGUÉ --- */
     font-family: 'Rubik', sans-serif;
     text-transform: uppercase;
 }
- 
 
-.btn:hover{
-    transform:translateY(-3px);
-    background-color:#8C2041;
-    color:white;
+.btn:hover {
+    transform: translateY(-3px);
+    background-color: #8C2041;
+    color: white;
 }
 
-/* PARALLAX */
+/* ================================= */
+/* CLASES GLOBALES DE LAS SECCIONES  */
+/* ================================= */
 
-.parallax{
-    height:80vh;
-    background-image:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600");
-    background-size:cover;
-    background-position:center;
-    position:relative;
+/* Todas las secciones principales tendrán este contenedor para alinear todo igual a la izquierda */
+.seccion-juego, .galeria, .contenedor-principal {
+    max-width: 1200px;
+    margin: 100px auto; /* Centra el bloque en la pantalla pero deja margen vertical */
+    padding: 0 40px; /* Evita que el texto toque los bordes del monitor */
 }
 
-.overlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.35);
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.seccion-juego {
+    display: flex;         
+    align-items: center;   
+    justify-content: space-between; 
+    gap: 60px;          
 }
 
-.overlay h2{
-    color:white;
-    font-size:3rem;
+.seccion-juego.inversa {
+    flex-direction: row-reverse;
 }
 
-/* CONTENIDO */
-
-.contenido{
-    max-width:900px;
-    margin:auto;
-    padding:80px 20px;
-    text-align:center;
+.bloque-informacion {
+    flex: 1;          
+    text-align: left; /* Fuerzo todo el texto a la izquierda */
 }
 
-.contenido h2{
-    margin-bottom:20px;
-    font-size:2.5rem;
+.bloque-imagen {
+    flex: 1;          
+    display: flex;
+    justify-content: center;
 }
 
-.contenido p{
-    line-height:1.8;
-    font-size:1.1rem;
+.bloque-imagen img {
+    max-width: 100%;       
+    height: auto;
+    border-radius: 10px;
 }
 
-/* GALERÍA */
-
-.galeria{
-    padding:80px 20px;
-}
-
-.galeria h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    
-    
+/* Títulos y Párrafos de las secciones (Todo a la izquierda) */
+.titulo-seccion, .galeria h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 32px;             
-    letter-spacing: 0.08em;      
+    font-size: 32px;
+    text-align: left; /* <-- AQUÍ OBLIGAMOS QUE TODOS ESTÉN A LA IZQUIERDA */
+    color: #6B1831;
+    letter-spacing: 0.08em; 
     text-transform: uppercase;
-    color: #6B1831;              
+    margin-bottom: 20px;
 }
+
+.cuerpo-texto {
+    font-family: 'Rubik', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #8C2041; 
+    text-align: left; /* Párrafos a la izquierda */
+}
+
+/* ================================= */
+/* GALERÍA                           */
+/* ================================= */
 
 .grid {
-    max-width: 1200px;
-    margin: auto;
     display: grid;
-    /* --- LÍNEA QUE FUERZA LAS 4 COLUMNAS --- */
     grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
 }
 
 .grid img {
     width: 100%;
-    height: 200px;      /* <-- Bajé de 250px a 200px para equilibrar las 4 columnas */
-    object-fit: cover;  /* Esto asegura que la foto no se deforme, solo se recorte bonito */
+    height: 200px;      
+    object-fit: cover;  
     border-radius: 12px;
     cursor: pointer;
     transition: .3s;
 }
 
-.grid img:hover{
-    transform:scale(1.05);
+.grid img:hover {
+    transform: scale(1.05);
 }
 
-/* LIGHTBOX */
-
-.lightbox{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.9);
-    justify-content:center;
-    align-items:center;
-    z-index:999;
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
 }
 
-.lightbox img{
-    max-width:90%;
-    max-height:85%;
-    border-radius:10px;
+.lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 10px;
 }
 
-.cerrar{
-    position:absolute;
-    top:20px;
-    right:40px;
-    color:white;
-    font-size:3rem;
-    cursor:pointer;
+.cerrar {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
 }
 
-@media(max-width:768px){
+/* ================================= */
+/* CARRUSEL                          */
+/* ================================= */
+.carrusel-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative; 
+    margin: 80px 0; /* Espacio arriba y abajo del carrusel */
+}
 
-    .hero h1{
-        font-size:2.5rem;
+.carrusel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.carrusel-track img {
+    min-width: 33.33%; 
+    height: 400px; 
+    padding: 10px;
+}
+
+.btn-carrusel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-carrusel.prev { left: 20px; }
+.btn-carrusel.next { right: 20px; }
+
+.btn-carrusel:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+#foto1 { object-fit: contain; object-position: center; background-color: #FEFBF2; }
+#foto2 { object-fit: contain; background-color: #FEFBF2; }
+#foto3 { object-fit: contain; padding: 20px; background-color: #FEFBF2; }
+#foto4 { object-fit: cover; object-position: top; background-color: #FEFBF2; }
+#foto5 { object-fit: cover; background-color: #FEFBF2; }
+
+
+/* ================================= */
+/* MODOS DE JUEGO (TARJETAS)         */
+/* ================================= */
+.grid-modos {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.tarjeta-modo {
+    background-color: #f7d7da; 
+    border-radius: 20px;
+    padding: 40px 30px;
+    flex: 1;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.tarjeta-modo h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #6B1831;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+}
+
+.tarjeta-modo p {
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    color: #8C2041;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/* ================================= */
+/* RESPONSIVE (MÓVILES)              */
+/* ================================= */
+@media(max-width: 768px) {
+    .hero h1 { font-size: 80px; }
+    .hero p { font-size: 1.2rem; }
+    
+    .seccion-juego, .seccion-juego.inversa {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
     }
-
-    .overlay h2{
-        font-size:2rem;
+    
+    .bloque-informacion, .cuerpo-texto, .titulo-seccion {
+        text-align: center; /* En celular es mejor centrar todo */
     }
+    
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .grid-modos { flex-direction: column; }
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1. ACTUALIZAMOS EL ESTILO BASE DE LAS IMÁGENES DEL CARRUSEL */
+.carrusel-track img {
+    min-width: 33.33%; 
+    height: 400px; 
+    padding: 10px;
+    
+    /* --- ESTO ES LO NUEVO --- */
+    transition: transform 0.3s ease; /* Hace que el crecimiento sea suave y no de golpe */
+    cursor: pointer; /* Cambia la flecha del mouse por una "manito" para invitar a interactuar */
+    position: relative; /* Necesario para el truco de la superposición (abajo) */
+}
+
+/* 2. AGREGAMOS EL EFECTO HOVER (CUANDO EL MOUSE PASA POR ENCIMA) */
+.carrusel-track img:hover {
+    transform: scale(1.08); /* 1.08 significa que crece un 8%. Si lo quieres más grande pon 1.1, si lo quieres sutil pon 1.05 */
+    z-index: 5; /* Hace que la imagen que estás tocando pase al frente y no quede escondida detrás de las otras */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================================= */
+/* SECCIÓN CONCEPTUAL: PROGRESIÓN DE LA FRAGILIDAD   */
+/* ================================================= */
+
+.seccion-concepto {
+    background-color: #8C2041; /* Fondo Frambuesa */
+    padding: 100px 40px; /* Aire arriba/abajo y a los lados */
+    margin: 100px 0; /* Separación con las otras secciones de la web */
+}
+
+/* El título en Bebas Neue y color crema */
+.titulo-concepto {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 55px;
+    color: #FEFBF2; /* Color crema */
+    letter-spacing: 0.08em;
+    text-align: center; 
+    margin-bottom: 60px; /* Separación entre el título y las columnas */
+}
+
+/* --- Layout de las dos columnas --- */
+.dos-columnas-texto {
+    display: flex;
+    gap: 60px; /* El espacio vacío entre la columna izquierda y la derecha */
+    justify-content: space-between;
+    align-items: center; /* Centra los textos verticalmente si una columna es más larga que otra */
+}
+
+.dos-columnas-texto .columna {
+    flex: 1; /* Ambas columnas miden exactamente lo mismo (50% y 50%) */
+    text-align: left;
+}
+
+/* Los párrafos en tipografía Rubik y color crema */
+.dos-columnas-texto p {
+    font-family: 'Rubik', sans-serif;
+    font-size: 17px;
+    color: #FEFBF2; /* Color crema */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Hacemos que el primer texto (el de la izquierda) resalte más */
+.dos-columnas-texto .destacado {
+    font-size: 28px;
+    font-weight: 700; /* Negrita */
+    line-height: 1.4;
+}
+
+/* Adaptación para celulares: apilar las columnas una debajo de otra */
+@media (max-width: 768px) {
+    .dos-columnas-texto {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .titulo-concepto {
+        font-size: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ================================================= */
+/* TARJETAS DE ARMADO Y COLAPSO (Fase 2)             */
+/* ================================================= */
+
+.concepto-fases {
+    display: flex;
+    max-width: 1000px;
+    margin: 80px auto 0 auto; /* Crea el espacio entre el texto de arriba y las tarjetas */
+    gap: 40px;
+    justify-content: center;
+}
+
+/* Diseño base de las tarjetas (en reposo) */
+.tarjeta-fase {
+    flex: 1;
+    padding: 40px;
+    border: 1px solid rgba(254, 251, 242, 0.4); /* Borde color crema semi-transparente */
+    border-radius: 15px;
+    background-color: rgba(254, 251, 242, 0.05); /* Un fondo crema muuuuy sutil */
+    transition: all 0.4s ease; /* ¡Esta línea hace que el movimiento sea suave! */
+    text-align: left;
+}
+
+.tarjeta-fase h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.08em;
+    margin-bottom: 15px;
+    color: #FEFBF2; /* Cremita */
+}
+
+.tarjeta-fase p {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #FEFBF2; /* Cremita */
+}
+
+/* ================================================= */
+/* LA MAGIA: EFECTOS AL PASAR EL MOUSE (HOVER)       */
+/* ================================================= */
+
+/* Tarjeta ARMADO: Demuestra estabilidad, sube recta y firme */
+.tarjeta-fase.armado:hover {
+    background-color: rgba(254, 251, 242, 0.15); /* Se ilumina un poco */
+    transform: translateY(-8px); /* Sube 8 píxeles rectos */
+    border-color: #FEFBF2; /* El borde se vuelve sólido */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Crea sombra abajo */
+}
+
+/* Tarjeta COLAPSO: Demuestra inestabilidad, se inclina y "cae" */
+.tarjeta-fase.colapso:hover {
+    transform: rotate(4deg) translateY(8px); /* Se tuerce 4 grados y cae 8 píxeles */
+    border-color: #FEFBF2; 
+    background-color: rgba(0,0,0,0.25); /* Se oscurece, dando tensión */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Adaptación para celulares (se ponen una arriba de la otra) */
+@media (max-width: 768px) {
+    .concepto-fases {
+        flex-direction: column;
+    }
 }
 
 
