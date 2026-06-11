@@ -15,16 +15,30 @@
             <p>
                 Construye tu estructura y derriba las piezas rivales <br> sin provocar el colapso.
             </p>
-            <a href="Paginainteractiva.html" class="btn">IR A LA EXPERIENCIA INTERACTIVA</a>
+            <a href="juego.html" class="btn">IR A LA EXPERIENCIA INTERACTIVA</a>
         </div>
     </section>
 
-    <!-- PARALLAX -->
-    <section class="parallax">
-        <div class="overlay">
-            <h2>Esto es un título 2</h2>
-        </div>
-    </section>
+<section class="seccion-juego">
+    <div class="bloque-informacion">
+        <h2 class="titulo-seccion">¿En qué consiste el juego?</h2>
+        <p class="cuerpo-texto">
+            En Zona Inestable, tú construyes la estructura en la que jugarás y, usando una caña,
+            deberás derribar la mayor cantidad de piezas rivales fuera de la estructura, mediante
+            el uso preciso de una caña extensible, evitando derribar tus propias piezas tanto 
+            como el colapso de la estructura. <br>
+           
+        </p>
+    </div>
+
+    
+
+    <div class="bloque-imagen">
+        <img src="tu-imagen.jpg" alt="Zona Inestable">
+    </div>
+</section>
+
+    
 
     <!-- GALERÍA -->
     <section id="galeria" class="galeria">
@@ -48,6 +62,173 @@
     </div>
 
     <script src="script.js"></script>
+
+    <section class="seccion-juego inversa">
+    <div class="bloque-informacion">
+         
+        <h2 class="titulo-seccion">PREPARACIÓN</h2>
+        <p class="cuerpo-texto">
+             Previo al juego como tal, los jugadores deberán construir las estructuras, 
+             montando cada plataforma, ensamblandolas con sus respectivos pilares y bases.
+            La cantidad de torres y ubicación de cada plataforma queda a criterio de cada jugador,
+            no es necesario utilizar todas las plataformas disponibles. Una vez lista la estructura,
+            los jugadores colocan sobre cada plataforma y siguiendo la grilla, las piezas de colores,
+             colocando las piezas especiales más cerca de la zona central de la plataforma, 
+             pues estas valen 2 puntos,a diferencia de las normales que valen 1. Cuando todas las piezas están colocadas,
+             los jugadores toman aleatoriamente de la bolsa de tela una pieza plana de color cada uno,
+              para sortear con qué color jugará cada uno. Una vez cada jugador sepa con que color deberá jugar, el juego puede empezar.<br>
+           
+        </p>
+    </div>
+
+    <div class="bloque-imagen">
+        <img src="tu-imagen.jpg" alt="Zona Inestable">
+    </div>
+</section>
+
+<section class="seccion-juego inverso"></section>
+
+
+
+
+
+
+<div class="carrusel-container">
+  <div class="carrusel-track" id="track">
+    <img src="assets/torre editable 1.png" id="foto1" alt="torre 1.png">
+    <img src="assets/torre editable 2.png" id="foto2" alt="torre 2.png">
+    <img src="assets/torre editable 3.png" id="foto3" alt="torre 3.png">
+    <img src="assets/torre editable 4.png" id="foto4" alt="torre 4.png">
+    <img src="assets/torre editable 5.png" id="foto5" alt="torre 5.png">
+  </div>
+ <button class="btn-carrusel prev" onclick="mover(-1)">&#10094;</button>
+  <button class="btn-carrusel next" onclick="mover(1)">&#10095;</button>
+</div>
+
+
+
+
+
+ <section style="display: flex; align-items: center; justify-content: space-between; gap: 60px; max-width: 1200px; margin: 100px auto; padding: 0 40px;">
+    
+    <div style="flex: 1; text-align: left;">
+        <h2 class="titulo-seccion">TÚ TURNO</h2>
+        <p class="cuerpo-texto">
+           El turno de cada jugador inicia lanzando la ruleta, 
+           la cuál dictará con que mano (derecha, izquierda, ambas manos, 
+           o el jugador de la derecha elige) y cual caña (corta con bola pesada
+           o liviana y liviana con bola pesada o liviana) deberá jugar. 
+           Tras saber con que condiciones jugar, el jugador toma la distancia 
+           necesaria y realiza un movimiento pendular con la caña para lograr 
+           impactar alguna pieza rival con la bola, sacándola de las plataformas 
+           si es posible y, de esta manera, consiguiendo un punto.
+        </p>
+    </div>
+
+    <div style="flex: 1; display: flex; justify-content: center;">
+        <img src="tu-imagen.jpg" alt="Tú Turno Zona Inestable" style="max-width: 100%; height: auto; border-radius: 10px;">
+    </div>
+
+</section>
+    
+
+     <div class="bloque-imagen">
+        <img src="tu-imagen.jpg" alt="Zona Inestable">
+    </div>
+</section>
+
+
+
+
+
+<section class="contenedor-principal">
+    <h1 class="titulo-seccion">MODOS DE JUEGO Y FIN DE LA PARTIDA</h1>
+        
+    <div class="grid-modos">
+            
+        <article class="tarjeta-modo">
+            <h2>DESCALIFICACIÓN</h2>
+            <p>Cuando un jugador derriba una torre, este pierde todos sus puntos y es descalificado de la partida. Si quedan plataformas en pie, el resto de jugadores continúan jugando normalmente con las plataformas restantes. Gana el jugador con más puntos, sumando las piezas normales y las especiales, y restando las piezas del color propio.</p>
+        </article>
+
+        <article class="tarjeta-modo">
+            <h2>FANTASMA</h2>
+            <p>Cuando un jugador derriba una torre, este pierde todos sus puntos y queda como fantasma el resto de la partida, pudiendo mover las plataformas de ubicación cada vez que sea su turno. No podrá ganar la partida, pero si entorpecer la de los jugadores restantes.</p>
+        </article>
+
+        <article class="tarjeta-modo">
+            <h2>VERSUS</h2>
+            <p>2 jugadores utilizan ambas cañas y juegan a la vez, intentando botar la mayor cantidad de piezas en menos de 6 minutos. Se intercambian las cañas cada 1 minuto y el juego termina cuando uno de los jugadores bota la torre (en ese caso pierde) o cuando todas las piezas sean derribadas, ganando el jugador con mayor puntaje.</p>
+        </article>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="seccion-concepto">
+    <div class="contenedor-principal">
+        
+        <h2 class="titulo-concepto">LA PROGRESIÓN DE LA FRAGILIDAD</h2>
+        
+        <div class="dos-columnas-texto">
+            
+            <div class="columna">
+                <p class="destacado">Zona Inestable se define por un ciclo de tensión física entre el proceso controlado de construcción (armado) y la inevitable posibilidad del colapso.</p>
+            </div>
+
+            <div class="columna">
+                <p>La propuesta abstrae la tensión creciente que precede al colapso presente en el juego. Al ser una lucha constante contra la gravedad, se busca traducir esa sensación de cómo la estabilidad de una estructura cambia con el tiempo a medida que es intervenida, generando una sensación creciente de tensión e incertidumbre sobre su posible colapso.</p>
+                <p>A medida que el usuario navega, la interfaz evidencia cómo un sistema pierde estabilidad al ser intervenido. En lugar de presentar una estructura sólida e inmutable, el diseño expone su vulnerabilidad y hace visible el impacto de cada acción realizada por el usuario.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="seccion-concepto">
+    <div class="contenedor-principal">
+        
+        <h2 class="titulo-concepto">LA PROGRESIÓN DE LA FRAGILIDAD</h2>
+        
+        <div class="dos-columnas-texto">
+            <div class="columna">
+                <p class="destacado">Zona Inestable se define por un ciclo de tensión física entre el proceso controlado de construcción (armado) y la inevitable posibilidad del colapso.</p>
+            </div>
+            <div class="columna">
+                <p>La propuesta abstrae la tensión creciente que precede al colapso presente en el juego. Al ser una lucha constante contra la gravedad, se busca traducir esa sensación de cómo la estabilidad de una estructura cambia con el tiempo a medida que es intervenida, generando una sensación creciente de tensión e incertidumbre sobre su posible colapso.</p>
+                <p>A medida que el usuario navega, la interfaz evidencia cómo un sistema pierde estabilidad al ser intervenido. En lugar de presentar una estructura sólida e inmutable, el diseño expone su vulnerabilidad y hace visible el impacto de cada acción realizada por el usuario.</p>
+            </div>
+        </div>
+
+        <div class="concepto-fases">
+            <div class="tarjeta-fase armado">
+                <h3>ARMADO</h3>
+                <p>Se manifiesta mediante interacciones que exigen precisión y control, evocando el proceso de construcción de la torre.</p>
+            </div>
+
+            <div class="tarjeta-fase colapso">
+                <h3>COLAPSO</h3>
+                <p>Constituye el eje central de la experiencia. A través de diversas interacciones, la estructura reacciona a la acción del usuario generando sensaciones de caos, pérdida de control y desequilibrio. De esta manera, la interfaz no solo representa el juego, sino que adopta su misma lógica de funcionamiento.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 </body>
 </html>
